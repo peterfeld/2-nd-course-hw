@@ -32,7 +32,7 @@ input, select, button {
   padding-top: 217px;
   box-sizing: border-box;
 }
-.header_title {
+.header__title {
   color: #FFF;
   font-size: 64px;
   font-weight: 700;
@@ -40,7 +40,7 @@ input, select, button {
   margin-bottom: 32px;
   width: 780px;
 }
-.header_text {
+.header__text {
   color: #FFF;
   font-size: 18px;
   font-weight: 300;
@@ -48,10 +48,10 @@ input, select, button {
   margin-bottom: 50px;
   width: 481px;
 }
-.header_text__bold {
+.header__text_bold {
   font-weight: 700;
 }
-.header_button {
+.header__button {
   color: #FFF;
   font-size: 18px;
   font-weight: 400;
@@ -66,18 +66,18 @@ input, select, button {
   padding-top: 128px;
   padding-bottom: 128px;
 }
-.games_list {
+.games__list {
   display: flex;
   justify-content: space-between;
   gap: 32px;
 }
-.games_link {
+.games__link {
   color: #FFF;
   font-size: 24px;
   font-weight: 600;
   line-height: 32px;
 }
-.games_link {
+.games__link {
   display: flex;
   width: 378px;
   height: 299px;
@@ -87,15 +87,15 @@ input, select, button {
   padding-left: 32px;
   box-sizing: border-box;
 }
-.games_link__1 {
+.games__link_1 {
   background-image: url(./img/games_link_1.jpg);
   background-repeat: no-repeat;
 }
-.games_link__2 {
+.games__link_2 {
   background-image: url(./img/games_link_2.jpg);
   background-repeat: no-repeat;
 }
-.games_link__3 {
+.games__link_3 {
   background-image: url(./img/games_link_3.jpg);
   background-repeat: no-repeat;
 }/*# sourceMappingURL=style.css.map */
