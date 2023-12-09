@@ -28,9 +28,7 @@ alert(numberOne / numberTwo);
 //Задание 5
 
 let exrcsFiveNum = 2;
-let result = Number;
-
-result = exrcsFiveNum ** 5;
+let result = exrcsFiveNum ** 5;
 
 alert(result);
 
@@ -45,10 +43,10 @@ alert(exrcsSixResult);
 //Задание 7
 
 let exrcsSevenNum = 1;
-exrcsSevenNum = exrcsSevenNum + 5;
-exrcsSevenNum = exrcsSevenNum - 3;
-exrcsSevenNum = exrcsSevenNum * 7;
-exrcsSevenNum = exrcsSevenNum / 3;
+exrcsSevenNum +=5;
+exrcsSevenNum -=3;
+exrcsSevenNum *=7;
+exrcsSevenNum /= 3;
 exrcsSevenNum++;
 exrcsSevenNum--;
 alert(exrcsSevenNum);
@@ -83,7 +81,7 @@ delete user['city of residence'];
 let info = prompt("Какую информацию хотите узнать о пользователе?");
 alert(user[info]);
 
-//Задание 10
+//Задание10
 
 let userName = prompt("Как Вас зовут?");
 alert(`Привет, ${userName} !`);
