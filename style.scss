@@ -62,6 +62,10 @@ input, select, button {
         border-radius: 30px;
         background: #9C0332;
         padding: 13px 74px;
+
+        &:hover {
+            cursor: url("./img/clarity_cursor-hand-line.png"), pointer;
+        }
     }
 }
 
@@ -92,6 +96,13 @@ input, select, button {
         padding-top: 237px;
         padding-left: 32px;
         box-sizing: border-box;
+        transition: all 0.1s;
+
+        &:hover {
+            cursor: url("./img/clarity_cursor-hand-line.png"), pointer;
+            border-radius: 16px;
+            border: 3px solid #44D2FF;
+        }
     }
 
     &__link_1 {

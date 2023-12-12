@@ -60,6 +60,9 @@ input, select, button {
   background: #9C0332;
   padding: 13px 74px;
 }
+.header__button:hover {
+  cursor: url("./img/clarity_cursor-hand-line.png"), pointer;
+}
 
 .games {
   background-color: #000915;
@@ -86,6 +89,12 @@ input, select, button {
   padding-top: 237px;
   padding-left: 32px;
   box-sizing: border-box;
+  transition: all 0.1s;
+}
+.games__link:hover {
+  cursor: url("./img/clarity_cursor-hand-line.png"), pointer;
+  border-radius: 16px;
+  border: 3px solid #44D2FF;
 }
 .games__link_1 {
   background-image: url(./img/games_link_1.jpg);
