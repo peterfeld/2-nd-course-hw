@@ -1,0 +1,50 @@
+@media (max-width: 1220px) and (min-width: 768px) {
+    .center {
+        padding-left: calc(50% - 550px);
+        padding-right: calc(50% - 550px);
+    }
+
+    .games {
+        &__link {
+            width: 343px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+    .header {
+        height: 735px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url(./img/bg_mobile.jpg);
+
+        &__title {
+            font-size: 32px;
+            text-align: center;
+        }
+        
+        &__text {
+            font-size: 14px;
+            line-height: 22px;
+            text-align: center;
+        }
+
+    }
+    
+    .games {
+        &__list {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__link {
+            width: 343px;
+        }
+    }
+}
