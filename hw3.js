@@ -5,9 +5,7 @@ let inputPassword = prompt('Введите пароль');
 
 if (inputPassword === password) {
     console.log("Пароль введен верно");
-}
-
-else {
+} else {
     console.log("Пароль введен неправильно");
 }
 
@@ -37,9 +35,7 @@ let monthNumber = Number(prompt("Введите номер месяца"));
 
 if (monthNumber >=13) {
     console.log ("Введите число от 1 до 12")
-}
-
-else {
+} else {
     switch (monthNumber) {
         case 1:
         case 2:
@@ -61,9 +57,6 @@ else {
         case 11:
             console.log ("Этот месяц - осень")
             break;
-        case monthNumber >=13:
-            console.log ("Введите число от 1 до 12")
-            break;   
 
         default:
             console.log ("Введено некорректное значение")
@@ -75,8 +68,8 @@ else {
 
 let hwTreeNum = prompt("Пожалуйста, введите любое число");
 
-if (isNaN(hwTreeNum) === true) {
-    console.log ("Введено не число");
+if (isNaN(hwTreeNum) || hwTreeNum === null || hwTreeNum.trim() === '') {
+    console.log ("Некорректный ввод");
 } else {
     if (hwTreeNum % 2 === 0) {
         alert("Число четное");
