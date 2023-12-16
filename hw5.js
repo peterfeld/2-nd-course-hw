@@ -96,6 +96,8 @@ let circle2 = {
     }
 }
 
+// Задание 8
+
 const seasonsGame = function () {
     let seasonsNum = Number(prompt('Введите номер месяца от 1 до 12'));
 
