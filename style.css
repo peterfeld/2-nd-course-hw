@@ -1,3 +1,14 @@
+@keyframes buttonAnim {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -61,6 +72,7 @@ input, select, button {
   padding: 13px 74px;
 }
 .header__button:hover {
+  animation: buttonAnim 2s ease 0s 1 normal forwards;
   cursor: url("./img/clarity_cursor-hand-line.png"), pointer;
 }
 
@@ -92,6 +104,7 @@ input, select, button {
   transition: all 0.1s;
 }
 .games__link:hover {
+  animation: buttonAnim 2s ease 0s 1 normal forwards;
   cursor: url("./img/clarity_cursor-hand-line.png"), pointer;
   border-radius: 16px;
   border: 3px solid #44D2FF;
@@ -115,22 +128,22 @@ input, select, button {
   background-color: #000915;
   color: #FFF;
 }
-.game_content {
+.game__content {
   max-width: 584px;
 }
-.game_title {
+.game__title {
   font-size: 48px;
   font-weight: 700;
   line-height: normal;
   margin-bottom: 32px;
 }
-.game_text {
+.game__text {
   font-size: 18px;
   font-weight: 300;
   line-height: 32px;
   margin-bottom: 40px;
 }
-.game_button {
+.game__button {
   color: #FFF;
   font-size: 18px;
   font-weight: 400;
@@ -142,8 +155,11 @@ input, select, button {
   padding-bottom: 14px;
   padding-left: 74px;
   padding-right: 90px;
+  border: none;
+  transition: all 0.1s;
 }
-.game_button:hover {
+.game__button:hover {
+  animation: buttonAnim 2s ease 0s 1 normal forwards;
   cursor: url("./img/clarity_cursor-hand-line.png"), pointer;
 }
 
@@ -205,28 +221,28 @@ input, select, button {
     padding-top: 50px;
     padding-bottom: 85px;
   }
-  .game_title {
+  .game__title {
     font-size: 32px;
     font-weight: 700;
     line-height: normal;
     text-align: center;
   }
-  .game_text {
+  .game__text {
     color: #FFF;
     font-size: 14px;
     font-weight: 300;
     line-height: 22px;
     text-align: center;
   }
-  .game_button {
+  .game__button {
     margin-left: auto;
     margin-right: auto;
   }
-  .game_img {
+  .game__img {
     width: 344px;
     height: 236px;
   }
-  .game_content {
+  .game__content {
     display: flex;
     flex-direction: column;
   }
