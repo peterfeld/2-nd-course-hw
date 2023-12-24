@@ -15,11 +15,7 @@ for (let i = 0; i < arr.length; i++) {
 
 const arr2 = [1, 5, 4, 10, 0, 3];
 
-for (let i = 0; i < arr2.length; i++) {
-    if (arr2[i] === 4) {
-        console.log(i);
-    }
-}
+console.log(arr2.indexOf(4))
 
 // Задание 3
 
@@ -61,20 +57,11 @@ console.log(arr6);
 const arr7 = [9, 8, 7, 6, 5];
 
 let num = Number(prompt('Угадай число'));
-let containNum = false;
 
-for (let i = 0; i < arr7.length; i++) {
-    if (arr7[i] === num) {
-        containNum = true;
-        break
-    }
-}
-
-(containNum) ? alert('Угадал') : alert('Не угадал');
-
-// Задание 7 другой вариант
-
-(arr7.includes(num)) ? alert('Угадал') : alert('Не угадал');
+if (isNaN(num)) {
+    alert('Переданный параметр не является числом')
+} else {
+    arr7.includes(num) ? alert('Угадал') : alert('Не угадал'); }
 
 // Задание 8
 
@@ -112,11 +99,7 @@ for (let i = 0; i < arr10.length - 1;i++) {
 // Задание 11
 
 const squareArr = function (arr) {
-    let result = [];
-
-    for (let element of arr) {
-        result.push(element*element) 
-    }
+    const result = arr.map((num) => num ** 2);
 
     return result
 }
@@ -127,30 +110,20 @@ console.log(squareArr(arr11));
 
 // Задание 12
 
-let strLength = function (arr) {
-    let length12 = [];
-
-    for (let element of arr ) {
-        let elementArr = element.split('');
-        length12.push(elementArr.length)
-    }
-    return length12
+let strLength2 = function (arr) {
+    const result = arr.map((element) => element.split('').length);
+    return result
 }
 
 let arr12 = ['слово', '', 'слог', 'длинное предложение', 'буква'];
 
-strLength(arr12);
+console.log(strLength2(arr12));
 
 // Задание 13
 
 let filterPositive = function (arr) {
-    let filterArr = [];
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] < 0) {
-            filterArr.push(arr[i]) 
-        }
-    }
-    return filterArr
+    const result = arr.filter(numbs => numbs < 0)
+    return result
 }
 
 // Задание 14
