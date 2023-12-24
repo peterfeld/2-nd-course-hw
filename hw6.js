@@ -115,10 +115,6 @@ let strLength2 = function (arr) {
     return result
 }
 
-let arr12 = ['слово', '', 'слог', 'длинное предложение', 'буква'];
-
-console.log(strLength2(arr12));
-
 // Задание 13
 
 let filterPositive = function (arr) {
