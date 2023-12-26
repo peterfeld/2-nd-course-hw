@@ -155,6 +155,15 @@ input, select, button {
   align-items: center;
 }
 
+.game2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 135px;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
 @media (max-width: 1220px) and (min-width: 1024px) {
   .center {
     padding-left: calc(50% - 500px);
@@ -231,6 +240,10 @@ input, select, button {
     flex-direction: column;
   }
   .game1 {
+    flex-direction: column;
+    gap: 77px;
+  }
+  .game2 {
     flex-direction: column;
     gap: 77px;
   }
