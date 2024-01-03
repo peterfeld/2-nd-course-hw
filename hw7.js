@@ -1,8 +1,10 @@
 // Задание 1
 
-const toUpper = function (arr) {
-   return arr.toUpperCase()
+const toUpper = function (str) {
+   return str.toUpperCase()
 }
+
+toUpper('Кошка');
 
 // Задание 2
 
@@ -15,6 +17,8 @@ const searchStart = function (strArr, str2) {
 
     return result
 }
+
+searchStart(['Кошка', 'Кит', 'Комар', 'Носорог'], 'ко');
 
 // Задание 3
 
@@ -48,6 +52,8 @@ let getRandomArrNumbers = function (n) {
     return result;
 }
 
+getRandomArrNumbers(10);
+
 // Задание 7
 
 let getRandomDiap = function (a, b) {
@@ -55,6 +61,8 @@ let getRandomDiap = function (a, b) {
         return getRandomInt(b, a)
     } return getRandomInt(a, b)
 }
+
+getRandomDiap(1, 10);
 
 // Задание 8
 
@@ -69,7 +77,7 @@ console.log(newDate);
 
 // // Задание 10
 
-let getData = function (data) {
+let getDate = function (data) {
     const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
     const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
         "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
@@ -94,6 +102,8 @@ let getData = function (data) {
             
 }
 
+getDate(currentDate)
+
 let rememberGame = function () {
     let arr = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
     arr = arr.sort(() => Math.random() - 0.5);
@@ -103,13 +113,16 @@ let rememberGame = function () {
     let answer1 = String(prompt('Чему равнялся первый элемент массива?'));
     let answer2 = String(prompt('Чему равнялся последний элемент массива?'));
 
-    if (arr.includes(answer1) && arr.includes(answer2)) {
+    const arrToLower =  arr.map(str => str.toLowerCase())
+
+    if (arrToLower.includes(answer1.toLowerCase()) && arrToLower.includes(answer2.toLowerCase())) {
         alert('Поздравляю, оба ответа верны!')
-    } else if (arr.includes(answer1) || arr.includes(answer2)) {
+    } else if (arrToLower.includes(answer1.toLowerCase()) || arrToLower.includes(answer2.toLowerCase())) {
         alert('Вы были близки к победе!')
-    } else {
+    } else if (answer1 || answer2) {
+        alert ('Вы не ввели один или оба ответа')
+    } else 
+    {
         alert('Вы ответили неверно')
     }
-
-
 }

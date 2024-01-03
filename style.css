@@ -136,6 +136,7 @@ input, select, button {
   font-weight: 400;
   line-height: normal;
   color: #FFF;
+  border: none;
   border-radius: 30px;
   background-color: #9C0332;
   padding-top: 14px;
