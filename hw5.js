@@ -11,7 +11,7 @@ const fun1 = (a, b) => {
 // Задание 2
 
 const fun2 = (a) => {
-    if (a % 0 === 0) {
+    if (a % 2 === 0) {
         return console.log('Число четное')
     } else {
         return console.log('Число нечетное')
@@ -21,7 +21,7 @@ const fun2 = (a) => {
 // Задание 3.1
 
 const fun3 = (a) => {
-    return console.log(a ** 2);
+     console.log(a ** 2);
 }
  
 // Задание 3.2
@@ -36,15 +36,19 @@ const fun4 = (a) => {
 const fun5 = function () {
     let a = prompt('Сколько Вам лет');
 
-    if (a < 0) {
-       return console.log('Вы ввели неправильное значение')
+    if  (isNaN(a)) {
+        console.log('Вы ввели неправильное значение')
     } else {
-        if (a >= 0 && a < 13) {
-           return console.log('Привет, друг!')
+        if (a < 0) {
+            console.log('Вы ввели неправильное значение')
         } else {
-            return console.log('Добро пожаловать!');
+            if (a >= 0 && a < 13) {
+                console.log('Привет, друг!')
+            } else {
+                console.log('Добро пожаловать!');
+            }
         }
-    }
+    }    
 }
 
 // Задание 5
@@ -53,7 +57,7 @@ const fun6 = (a, b) => {
     if (isNaN(a) && isNaN(b)) {
         return a*b;
     } else {
-        return console.log('Одно или оба значения не являются числом');
+         console.log('Одно или оба значения не являются числом');
     }
 }
 
@@ -64,36 +68,34 @@ const fun7 = function () {
 
     if (!isNaN(a)) {
         let b = a ** 3;
-        return console.log(`${a} в кубе равняется ${b}`);
+         console.log(`${a} в кубе равняется ${b}`);
     } else {
-        return console.log('Переданный параметр не является числом');
+         console.log('Переданный параметр не является числом');
     }
 }
 
 // Задание 7
 
+let getArea = function () {
+    let a = Math.PI * this.radius**2
+    console.log(`${a} - площадь окружности`);
+}
+
+let getPerimeter = function () {
+    let a = Math.PI * this.radius*2
+    console.log(`${a} - периметр окружности`);
+}
+
 let circle1 = {
     radius : 4,
-    getArea() {
-                let a = 3.14*this.radius**2
-                console.log(`${a} - площадь окружности`);
-    },
-    getPerimeter() {
-                let a = 3.14*this.radius*2
-                console.log(`${a} - периметр окружности`);
-    }
+    getArea: getArea,
+    getPerimeter: getPerimeter,
 }
 
 let circle2 = {
     radius : 10,
-    getArea() {
-                let a = 3.14*this.radius**2
-                console.log(`${a} - площадь окружности`);
-    },
-    getPerimeter() {
-                let a = 3.14*this.radius*2
-                console.log(`${a} - периметр окружности`);
-    }
+    getArea: getArea,
+    getPerimeter: getPerimeter,
 }
 
 // Задание 8
@@ -102,32 +104,32 @@ const seasonsGame = function () {
     let seasonsNum = Number(prompt('Введите номер месяца от 1 до 12'));
 
     if (seasonsNum >=13) {
-        console.log ("Введите число от 1 до 12")
+        alert("Введите число от 1 до 12")
     } else {
         switch (seasonsNum) {
             case 1:
             case 2:
             case 12:
-                console.log ("Этот месяц - зима")
+                alert("Этот месяц - зима")
                 break; 
             case 3:
             case 4:
             case 5:
-                console.log ("Этот месяц - весна")
+                alert("Этот месяц - весна")
                 break;  
             case 6:
             case 7:
             case 8:
-                console.log ("Этот месяц - лето")
+                alert("Этот месяц - лето")
                 break;
             case 9:
             case 10:
             case 11:
-                console.log ("Этот месяц - осень")
+                alert("Этот месяц - осень")
                 break;
     
             default:
-                console.log ("Введено некорректное значение")
+                alert("Введено некорректное значение")
                 break;
         }
     }

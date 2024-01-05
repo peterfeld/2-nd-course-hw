@@ -1,3 +1,17 @@
+@keyframes buttonAnim {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.05);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -64,6 +78,7 @@ input, select, button {
         padding: 13px 74px;
 
         &:hover {
+            animation: buttonAnim 2s ease 0s 1 normal forwards;
             cursor: url("./img/clarity_cursor-hand-line.png"), pointer;
         }
     }
@@ -99,6 +114,7 @@ input, select, button {
         transition: all 0.1s;
 
         &:hover {
+            animation: buttonAnim 2s ease 0s 1 normal forwards;
             cursor: url("./img/clarity_cursor-hand-line.png"), pointer;
             border-radius: 16px;
             border: 3px solid #44D2FF;
@@ -127,25 +143,25 @@ input, select, button {
     background-color: #000915;
     color: #FFF;
 
-    &_content {
+    &__content {
         max-width: 584px;
     }
 
-    &_title {
+    &__title {
         font-size: 48px;
         font-weight: 700;
         line-height: normal;
         margin-bottom: 32px;
     }
 
-    &_text {
+    &__text {
         font-size: 18px;
         font-weight: 300;
         line-height: 32px;
         margin-bottom: 40px;
     }
 
-    &_button {
+    &__button {
         color: #FFF;
         font-size: 18px;
         font-weight: 400;
@@ -158,8 +174,11 @@ input, select, button {
         padding-bottom: 14px;
         padding-left: 74px;
         padding-right: 90px;
+        border: none;
+        transition: all 0.1s;
 
         &:hover {
+            animation: buttonAnim 2s ease 0s 1 normal forwards;
             cursor: url("./img/clarity_cursor-hand-line.png"), pointer;
         }
     }
