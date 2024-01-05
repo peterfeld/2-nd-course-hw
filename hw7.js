@@ -36,7 +36,7 @@ console.log(Math.min(52, 53, 49, 77, 21, 32))
 // Задание 5
 
 let getRandom = function () {
-    return Math.floor(Math.random() * 10);
+    return Math.floor(Math.random() * 10) + 1;
 }
 
 console.log(getRandom());
@@ -79,8 +79,8 @@ console.log(newDate);
 
 let getDate = function (data) {
     const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
-    const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
-        "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+    const months = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня",
+        "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"];
     let hour = data.getHours(); 
     let minute = data.getMinutes();
     let second = data.getSeconds(); 
@@ -115,14 +115,13 @@ let rememberGame = function () {
 
     const arrToLower =  arr.map(str => str.toLowerCase())
 
-    if (arrToLower.includes(answer1.toLowerCase()) && arrToLower.includes(answer2.toLowerCase())) {
+    if (!answer1 || !answer2) {
+        alert ('Вы не ввели один или оба ответа')
+    } else if (arrToLower.includes(answer1.toLowerCase()) && arrToLower.includes(answer2.toLowerCase())) {
         alert('Поздравляю, оба ответа верны!')
     } else if (arrToLower.includes(answer1.toLowerCase()) || arrToLower.includes(answer2.toLowerCase())) {
         alert('Вы были близки к победе!')
-    } else if (answer1 || answer2) {
-        alert ('Вы не ввели один или оба ответа')
-    } else 
-    {
+    } else {
         alert('Вы ответили неверно')
     }
 }
