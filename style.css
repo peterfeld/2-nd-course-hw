@@ -149,6 +149,7 @@ input, select, button {
   font-weight: 400;
   line-height: normal;
   color: #FFF;
+  border: none;
   border-radius: 30px;
   background-color: #9C0332;
   padding-top: 14px;
@@ -169,6 +170,15 @@ input, select, button {
   justify-content: space-between;
   gap: 123px;
   align-items: center;
+}
+
+.game2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 135px;
+  align-items: center;
+  flex-direction: row-reverse;
 }
 
 @media (max-width: 1220px) and (min-width: 1024px) {
@@ -247,6 +257,10 @@ input, select, button {
     flex-direction: column;
   }
   .game1 {
+    flex-direction: column;
+    gap: 77px;
+  }
+  .game2 {
     flex-direction: column;
     gap: 77px;
   }
