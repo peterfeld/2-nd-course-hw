@@ -117,9 +117,9 @@ let rememberGame = function () {
 
     if (!answer1 || !answer2) {
         alert ('Вы не ввели один или оба ответа')
-    } else if (arrToLower.includes(answer1.toLowerCase()) && arrToLower.includes(answer2.toLowerCase())) {
+    } else if (arrToLower[0] === answer1.toLowerCase() && arrToLower[6] === answer2.toLowerCase()) {
         alert('Поздравляю, оба ответа верны!')
-    } else if (arrToLower.includes(answer1.toLowerCase()) || arrToLower.includes(answer2.toLowerCase())) {
+    } else if (arrToLower[0] === answer1.toLowerCase() || arrToLower[6] === answer2.toLowerCase()) {
         alert('Вы были близки к победе!')
     } else {
         alert('Вы ответили неверно')
